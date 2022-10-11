@@ -1,0 +1,17 @@
+employee={'name':'Tim','age':30,'birthday':'1990-03-10','job':"Devops Engineer"}
+print("The original dictionary:\n",employee)
+employee['job']='Software Engineer'
+employee.pop('age')
+print("the dictionary after updated:\n")
+for i,j in employee.items():
+    print(i ,':',j)
+    
+    ###output
+   The original dictionary:
+ {'name': 'Tim', 'age': 30, 'birthday': '1990-03-10', 'job': 'Devops Engineer'}
+the dictionary after updated:
+
+name : Tim
+birthday : 1990-03-10
+job : Software Engineer
+
