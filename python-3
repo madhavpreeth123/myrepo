@@ -1,0 +1,40 @@
+####  first  code
+
+employee=[{'name':'Tina','age':30,'birthday':'1990-03-10','job':'Devops Engineer','address':{'city':'New york','country':'USA'}},{'name':'Tim','age':30,'birthday':'1985-02-21','job':'Developer','address':{'city':'sidney','country':'Australia'}}]
+for i in employee:
+    print('name :',i['name'])
+    print('job :',i['job'])
+    print('city :',i['address']['city'])
+
+print("country of second employee:",employee[1]['address']['country'])
+
+
+#### second code
+
+
+employee=[{'name':'Tina','age':30,'birthday':'1990-03-10','job':'Devops Engineer','address':{'city':'New york','country':'USA'}},{'name':'Tim','age':30,'birthday':'1985-02-21','job':'Developer','address':{'city':'sidney','country':'Australia'}}]
+for dictionary in employee:
+    for ele in dictionary:
+        if ele=="name":
+            print(ele,':',dictionary[ele])
+        elif ele=="job":
+            print(ele,':',dictionary[ele])
+        elif ele=="address":
+            for ele2 in dictionary[ele]:
+                if ele2=="city":
+                    print(ele2,':',dictionary[ele][ele2])
+
+
+
+print("country of the second employee :", employee[1]['address']['country'])
+
+
+
+#### out put
+name : Tina
+job : Devops Engineer
+city : New york
+name : Tim
+job : Developer
+city : sidney
+country of the second employee : Australia
