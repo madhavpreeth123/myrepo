@@ -1,11 +1,14 @@
 import base64
 from github import Github
 from pprint import pprint
-username="madhavpreeth123"
-g=Github()
-user=g.get_user(username)
-for repo in user.get_repos():
-    print(repo,':',repo.url)
+try:
+    username="madhavpreeth123"
+    g=Github()
+    user=g.get_user(username)
+    for repo in user.get_repos():
+        print(repo,':',repo.url)
+except:
+    print("Enter correct username")
     
     
   ## output ##
