@@ -1,4 +1,27 @@
 ## file1.py
+
+from operator import  itemgetter
+def my_fucn(my_list):
+
+    my_list.sort(key=itemgetter('age'))
+    print("Name of the Youngest employee:",my_list[0]['name'],'and','age:',my_list[0]['age'])
+
+
+
+list = [{"name": "Tina", "age": 30, "birthday": "1990-03-10", "job": "Devops Engineer",
+         "address": {"city": "New York", "country": "USA"}},
+        {"name": "Tim", "age": 35, "birthday": "1985-02-21", "job": "Developer",
+         "address": {"city": "Sydney", "country": "Australia"}},]
+my_fucn(list)
+
+## output ##
+Name of the Youngest employee: Tina and age: 30
+
+
+
+
+
+##file2.py
 def string_fun(mystring):
    
     u_count=0
@@ -24,7 +47,7 @@ The number of upper case letters: 1
 The number of lower case letters: 5
 
 
-## file2.py
+## file3.py
 def list_fun(list):
     print("The elements that your are entered into list:",list)
     print("The even numbers are:\n")
@@ -48,27 +71,7 @@ The even numbers are:
 8
 
 
-## file3.py
-def my_fucn(my_list):
-    if my_list[0]['age'] <my_list[1]['age']:
-        print("name of youngest employee:",my_list[0]['name'])
-        print("age of youngest employee:",my_list[0]['age'])
-    else:
-        print("name of youngest employee:",my_list[1]['name'])
-        print("age of youngest employee:",my_list[1]['age'])
-   
 
-
-list=[{"name":"Tina","age":30,"birthday":"1990-03-10","job":"Devops Engineer","address":{"city":"New York","country":"USA"}},
-{"name":"Tim","age":35,"birthday":"1985-02-21","job":"Developer","address":{"city":"Sydney","country":"Australia"}}]
-
-
-
-my_fucn(list)
-
-###output 
-name of youngest employee: Tina
-age of youngest employee: 30
 
 
  ### MODULE ##
@@ -76,6 +79,30 @@ age of youngest employee: 30
 file4.py
 
 from file1 import *
-from file2 import *
-from file3 import *
-//code
+from file2 import  *
+from file3 import  *
+
+
+list=[{"name": "Tina", "age": 30, "birthday": "1990-03-10", "job": "Devops Engineer",
+             "address": {"city": "New York", "country": "USA"}},
+            {"name": "Tim", "age": 35, "birthday": "1985-02-21", "job": "Developer",
+             "address": {"city": "Sydney", "country": "Australia"}},]
+my_fucn(list)
+mystring=input("Enter a string:\n")
+string_fun(mystring)
+my_list = [2,4,6,7]
+list_fun(my_list)
+
+## output ##
+
+Name of the Youngest employee: Tina and age: 30
+Enter a string:
+Good Moring
+The number of upper case letters: 2
+The number of lower case letters: 8
+The elements that your are entered into list: [2, 4, 6, 7]
+The even numbers are:
+
+2
+4
+6
